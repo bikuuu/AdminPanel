@@ -8,6 +8,8 @@ import {SideNavService} from '../services/side-nav.service';
 })
 export class DashboardComponent implements OnInit {
   isVisible = false;
+  name: string;
+  namesArray: string[] = [];
 
   constructor(private sideNavService: SideNavService) {
     // this.isVisible = this.sideNavService.isNavOpen;
@@ -26,4 +28,13 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(name): void {
+    this.namesArray.push(name);
+    this.name = '';
+    console.log(this.namesArray);
+  }
+
+  onDeleteButtonClick(i): void {
+    this.namesArray.splice(i, 1);
+  }
 }

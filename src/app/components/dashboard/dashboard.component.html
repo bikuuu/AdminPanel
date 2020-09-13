@@ -10,6 +10,18 @@
 <!--<a class="a">Jestem inlinem</a>-->
 <!--<a class="a">Jestem inlinem</a>-->
 <section class="dashboard" [ngClass]="{'dashboard-highlight': !isVisible}">
+  <input type="text" [(ngModel)]="name">
+  <button (click)="onSubmit(name)">Add</button>
+  <!--  <app-dashboard-item *ngFor="let item of namesArray"></app-dashboard-item>-->
+
+  <ul>
+    <li *ngFor="let item of namesArray; let i = index;">
+      <app-dashboard-item [itemName]="item"></app-dashboard-item>
+      <button (click)="onDeleteButtonClick(i)">Delete</button>
+    </li>
+  </ul>
+
+  <!--  <h2 *ngFor="let item of namesArray">{{item}}</h2>-->
   <h1 [ngClass]="{'highlight': isVisible}">Dashboard</h1>
   <p *ngIf="isVisible">Kurwa coś tam miało się wyświetlać</p>
   <button (click)="onButtonClick()">Click me!</button>
