@@ -1,0 +1,11 @@
+<nav class="nav" [ngClass]="{'nav--hidden': !isOpen}">
+  <button class="button" (click)="onClickButton()">< ></button>
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" routerLink="/">Dashboard</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" routerLink="/todo">ToDo</a>
+    </li>
+  </ul>
+</nav>

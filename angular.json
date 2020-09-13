@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AdminPanel"
+    }
+  },
+  "defaultProject": "AdminPanel",
+  "cli": {
+    "analytics": false
+  }
 }

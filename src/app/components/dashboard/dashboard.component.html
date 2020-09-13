@@ -1,0 +1,16 @@
+<!--<div class="div">Jestem divem</div>-->
+<!--<div class="div">Jestem divem</div>-->
+<!--<div class="div">Jestem divem</div>-->
+<!--<div class="div">Jestem divem</div>-->
+<!--<div class="div">Jestem divem</div>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<!--<a class="a">Jestem inlinem</a>-->
+<section class="dashboard" [ngClass]="{'dashboard-highlight': !isVisible}">
+  <h1 [ngClass]="{'highlight': isVisible}">Dashboard</h1>
+  <p *ngIf="isVisible">Kurwa coś tam miało się wyświetlać</p>
+  <button (click)="onButtonClick()">Click me!</button>
+</section>

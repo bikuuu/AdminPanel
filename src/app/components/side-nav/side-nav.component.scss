@@ -1,0 +1,30 @@
+.nav {
+  position: fixed;
+  text-align: right;
+  //left: 0;
+  z-index: 5;
+  height: 100vh;
+  width: 200px;
+  transform: translateX(0);
+  background-color: #222;
+  transition: transform .5s ease-in-out;
+
+  &__list {
+    text-align: left;
+  }
+
+  &__link {
+    color: #fff;
+  }
+
+  .button {
+    width: 50%;
+  }
+
+}
+
+.nav--hidden {
+  position: absolute;
+  //left: -150px;
+  transform: translateX(-152px);
+}

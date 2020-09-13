@@ -1,0 +1,33 @@
+//.div{
+//  height: 60px;
+//  width: 200px;
+//  border: 1px solid #333;
+//}
+//
+////hybryda inline i blocks
+//.a{
+//  display: inline-block;
+//  height: 60px;
+//  width: 200px;
+//  border: 1px solid #333;
+//}
+
+.dashboard {
+  padding-left: 200px;
+  text-align: center;
+  transition: padding-left 500ms ease-in-out;
+}
+
+.div {
+  height: 60px;
+  width: 200px;
+  border: 1px #333;
+}
+
+.highlight {
+  color: darkgoldenrod;
+}
+
+.dashboard-highlight {
+  padding-left: 50px;
+}
