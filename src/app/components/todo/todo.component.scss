@@ -1,0 +1,48 @@
+.todo {
+  padding-left: 100px;
+  width: 100vw;
+
+  input {
+    border: 1px solid #666;
+  }
+
+  &__list{
+
+  }
+
+}
+
+.padding-offset {
+  padding-left: 200px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 40px;
+
+  &_row {
+    display: flex;
+
+    input {
+      margin-bottom: 0;
+    }
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
+}
+
+span {
+  &_allert {
+    color: red;
+  }
+}

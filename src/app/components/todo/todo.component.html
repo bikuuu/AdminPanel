@@ -1,1 +1,42 @@
-<p>todo works!</p>
+<section class="todo" [ngClass]="{'padding-offset': isNavBarOpen}">
+  <p>todo works!</p>
+
+  <form class="form" [formGroup]="signupForm">
+    <input type="text" placeholder="Username" formControlName="username"/>
+    <span class="span_allert"
+          *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">Please enter valid user name</span>
+    <input type="email" placeholder="Email" formControlName="email"/>
+    <span class="span_allert"
+          *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Please enter valid email address</span>
+    <input type="tel" placeholder="Phone Number" formControlName="number"/>
+    <span class="span_allert"
+          *ngIf="!signupForm.get('number').valid && signupForm.get('number').touched">Please enter valid Phone number</span>
+    <button type="submit" (click)="onFormSubmit()">Submit</button>
+  </form>
+
+  <form class="form" [formGroup]="dateFormat">
+    <div class="form_row">
+      <input type="date" placeholder="Birthday date" formControlName="birthdayDate"/>
+      <button type="submit" (click)="onBirthdayDateFormat()">Submit</button>
+    </div>
+    <span class="span_allert" *ngIf="!dateFormat.get('birthdayDate').valid && dateFormat.get('birthdayDate').touched ">Please enter valid Birthday date</span>
+  </form>
+
+  <form class="form" [formGroup]="todoFormat">
+    <div class="form_row">
+      <input type="text" placeholder="Todo description" formControlName="todoDescription"/>
+      <button type="submit" (click)="todoAdd()">Add Todo</button>
+    </div>
+    <span>Please add your todo</span>
+  </form>
+
+  <ul>
+    <li class="todo__list" *ngFor="let todoItem of todoListData; let i = index;">
+      <h4>{{todoItem.description | uppercase}}</h4>
+      <span>{{todoItem.date | date: 'dd/MM/yyyy'}}</span>
+      <button (click)="onDeleteClick(i)">Delete</button>
+    </li>
+  </ul>
+
+
+</section>

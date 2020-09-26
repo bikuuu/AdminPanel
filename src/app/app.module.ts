@@ -6,8 +6,10 @@ import {AppComponent} from './app.component';
 import {SideNavComponent} from './components/side-nav/side-nav.component';
 import {TodoComponent} from './components/todo/todo.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
-import {FormsModule} from '@angular/forms';
-import { DashboardItemComponent } from './components/dashboard/dashboard-item/dashboard-item.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DashboardItemComponent} from './components/dashboard/dashboard-item/dashboard-item.component';
+import {ApiComponent} from './components/api/api.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,16 @@ import { DashboardItemComponent } from './components/dashboard/dashboard-item/da
     SideNavComponent,
     TodoComponent,
     DashboardComponent,
-    DashboardItemComponent
+    DashboardItemComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // informacja dla apki, że ma używać ReactiveForm
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

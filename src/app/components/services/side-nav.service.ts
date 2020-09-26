@@ -6,7 +6,7 @@ import {BehaviorSubject} from 'rxjs';
   providedIn: 'root'
 })
 export class SideNavService {
-  isNavOpen = new BehaviorSubject(true);
+  isNavOpen = new BehaviorSubject(false);
   isOpen = this.isNavOpen.asObservable();
 
   constructor() {
@@ -15,7 +15,7 @@ export class SideNavService {
   toggleNavBar(): void {
     // this.isNavOpen = !this.isNavOpen;
     this.isNavOpen.next(!this.isNavOpen.value);
-    console.log(this.isNavOpen, 'Jestem z serwisu');
+    // console.log(this.isNavOpen, 'Jestem z serwisu');
   }
 }
 

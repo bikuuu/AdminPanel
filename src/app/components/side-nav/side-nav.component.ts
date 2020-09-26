@@ -19,7 +19,7 @@ export class SideNavComponent implements OnInit {
   onClickButton(): void {
     this.siedeNavService.toggleNavBar();
     // this.isOpen = this.siedeNavService.isNavOpen;
-    console.log(this.siedeNavService.isNavOpen);
+    // console.log(this.siedeNavService.isNavOpen);
   }
 
   ngOnInit(): void {

@@ -1,0 +1,12 @@
+<section class="api">
+  <p>api works!</p>
+  <button (click)="onSendRequest()">Send request</button>
+  <ul>
+    <li *ngFor="let user of apiData.data">
+      {{user.first_name}}
+<!--      <img src={{user.avatar}}>-->
+      <img [src]="user.avatar" alt="awatar">
+      {{user.email}}
+    </li>
+  </ul>
+</section>
